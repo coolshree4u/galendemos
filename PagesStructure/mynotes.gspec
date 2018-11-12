@@ -1,0 +1,9 @@
+
+
+@objects
+	main-caption		#my-notes-page > h2
+	
+
+= My notes =
+	main-caption:
+		text is "My Notes"

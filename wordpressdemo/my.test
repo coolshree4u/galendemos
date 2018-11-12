@@ -1,0 +1,12 @@
+
+Home page on mobile
+	https://wordpress.com/                 500x700
+        	check homepage.gspec --include mobile
+
+Home page on desktop
+	https://wordpress.com/                 1024x768
+		check homepage.gspec --include desktop
+
+Home page on tablet
+        https://wordpress.com/                 600x960
+                check homepage.gspec --include tablet

@@ -1,0 +1,45 @@
+@objects
+   headerlogo	 xpath   .//a[contains(text(),'WordPress.com')]
+   headerlogin   xpath   .//a[@title='Log In']	
+   menubtn	 xpath   .//a[@id='masterbar__menu-toggle']
+   divtxt        xpath   .//div[@class='hp-hero__wrapper']/p[1]
+   spantxt       xpath   .//div[@class='hp-hero__wrapper']/p[1]/span[1]
+   card-item-*   xpath   .//div[@id='plans-table']
+   divplans2     xpath   .//div[@id='plans-table']/div[2]/div[1]
+   divplans4     xpath   .//div[@id='plans-table']/div[4]/div[1]
+   planPricing   xpath   .//section[@id='plans']//h2
+
+= Header =
+   @on desktop
+      headerlogo:
+         left-of   headerlogin 5 to 700 px
+   
+   @on desktop
+      headerlogin:
+         right-of  headerlogo  5 to 700 px
+   
+   @on mobile
+      menubtn:
+         right-of  headerlogo 8 px
+   
+   @on desktop
+      menubtn:
+         absent
+
+   @on desktop
+      spantxt:
+         inside    divtxt 0 to 144 px left right, 0 to 34 px top bottom
+         text is   "WordPress.com is the easiest place to get started." 
+         css font-size is "21px"
+
+   @on desktop
+      divplans2:
+         below      planPricing 64 px
+
+   @on mobile
+      divplans4:
+         below      divplans2   64 px
+   
+   @on tablet
+      divplans4:
+         below      divplans2   64 px
